@@ -21,7 +21,7 @@ This is a basic program to store coffee information using REST API with CRUD ope
 
 ## How to run 
 
-1. Download this software to your machine, e.g. `git clone PeterwMcClelland/coffee-rolodex`
+1. Download this software to your machine, e.g. `git clone PeterwMcClelland/coffee-rolodex-sample`
 2. Navigate into the directory, e.g. `cd coffee-rolodex`
 3. Install the dependencies, e.g. `npm i`
 4. Set up MongoDB. Create cluster in MongoDB, (https://www.mongodb.com/)
