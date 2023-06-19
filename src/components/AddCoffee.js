@@ -28,7 +28,7 @@ import { useNavigate } from 'react-router-dom';
      };
 
      const sendRequest = async() => {
-         axios.post("https://coffee-rolodex-sample.herokuapp.com/api/coffees", {
+         axios.post("https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/api/coffees", {
              name:String(inputs.name),
              brand:String(inputs.brand),
              country:String(inputs.country),

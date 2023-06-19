@@ -3,7 +3,7 @@ import axios from 'axios';
 import Coffee from "./Coffee";
 import "./Coffee.css";
 
-const URL = process.env.NODE_ENV === "production" ? "https://coffee-rolodex-sample.herokuapp.com/api/coffees" : "http://localhost:3000/api/coffees";
+const URL = process.env.NODE_ENV === "production" ? "https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/api/coffees" : "http://localhost:3000/api/coffees";
 
 const fetchHandler = async() => {
     return await axios.get(URL).then((res)=> res.data);
@@ -11,7 +11,7 @@ const fetchHandler = async() => {
 
 const deleteHandler = async(id, setCoffees) => {
   if (window.confirm('Are you sure you want to delete?')) {
-    await axios.delete(`https://coffee-rolodex-sample.herokuapp.com/api/coffees/${id}`)
+    await axios.delete(`https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/api/coffees/${id}`)
     .then(res=>res.data)
     .then(()=> fetchHandler().then(data => setCoffees(data.coffees)));
   }

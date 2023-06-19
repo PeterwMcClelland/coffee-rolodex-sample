@@ -14,7 +14,7 @@ const CoffeeDetail = () => {
     useEffect(() => {
         const fetchHandler = async () => {
             await axios
-            .get(`https://coffee-rolodex-sample.herokuapp.com/api/coffees/${id}`)
+            .get(`https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/api/coffees/${id}`)
             .then((res) => res.data)
             .then((data)=>setInputs(data.coffee));
         };
@@ -22,7 +22,7 @@ const CoffeeDetail = () => {
     }, [id]);
 
     const sendRequest = async () => {
-        await axios.put(`https://coffee-rolodex-sample.herokuapp.com/api/coffees/${id}`, {
+        await axios.put(`https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/api/coffees/${id}`, {
              name: String(inputs.name),
              brand: String(inputs.brand),
              country: String(inputs.country),
