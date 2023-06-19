@@ -36,119 +36,140 @@ const CoffeeDetail = () => {
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
-        sendRequest().then(()=>history("/coffees"));
+      e.preventDefault();
+      sendRequest().then(()=>history("/coffees"));
+  }
 
-    }
-    
-    const handleChange = (e) => {
-        setInputs((prevState) => ({
-            ...prevState,
-            [e.target.name]: e.target.value
-        }));
-    };
+  const handleChange = (e) => {
+      const newInputs = {
+          ...inputs,
+          [e.target.name]: e.target.value,
+      };
 
-  return (<div>
+      if (["output", "tds", "espresso_gs"].includes(e.target.name) && newInputs.output && newInputs.tds && newInputs.espresso_gs) {
+          newInputs.percent = ((Number(newInputs.output) * Number(newInputs.tds)) / Number(newInputs.espresso_gs)).toFixed(2);
+      }
+
+      setInputs(newInputs);
+  };
+
+  return (
+  <div>
       {inputs && (
-      <form onSubmit={handleSubmit}>
-      <Box 
-        display="flex" 
-        flexDirection="column" 
-        justifyContent={'center'} 
-        maxWidth={700}
-        alignContent={'center'}
-        alignSelf={'center'}
-        marginLeft={'auto'}
-        marginRight={'auto'}
-        marginTop={10}
-        marginBottom={10}
-       >
+          <form onSubmit={handleSubmit}>
+              <Box 
+              display="flex" 
+              flexDirection="column" 
+              justifyContent={'center'} 
+              maxWidth={700}
+              alignContent={'center'}
+              alignSelf={'center'}
+              marginLeft={'auto'}
+              marginRight={'auto'}
+              marginTop={10}
+              marginBottom={10}
+              >
 
-      <FormLabel>Coffee</FormLabel>
-        <TextField 
-        value={inputs.name} 
-        onChange={handleChange} 
-        margin='normal' 
-        fullWidth variant='outlined' 
-        name="name" />
+              <FormLabel>Coffee</FormLabel>
+              <TextField 
+              value={inputs.name} 
+              onChange={handleChange} 
+              margin='normal' 
+              fullWidth variant='outlined' 
+              name="name" 
+              placeholder='Example "NAMBALLE - Cajamarca, Peru"'
+              />
 
-      <FormLabel>Roaster</FormLabel>
-        <TextField 
-        value={inputs.brand} 
-        onChange={handleChange} 
-        margin='normal' 
-        fullWidth variant='outlined' 
-        name="brand" />
+              <FormLabel>Roaster</FormLabel>
+              <TextField 
+              value={inputs.brand} 
+              onChange={handleChange} 
+              margin='normal' 
+              fullWidth variant='outlined' 
+              name="brand" 
+              placeholder='Example "Sweet Bloom"'
+              />
 
-      <FormLabel>Grams In</FormLabel>
-        <TextField 
-        value={inputs.espresso_gs} 
-        onChange={handleChange} 
-        margin='normal' 
-        fullWidth variant='outlined' 
-        name="espresso_gs" />
+              <FormLabel>Grams In</FormLabel>
+              <TextField 
+              value={inputs.espresso_gs} 
+              onChange={handleChange} 
+              margin='normal' 
+              fullWidth variant='outlined' 
+              name="espresso_gs" 
+              placeholder='Grams of Espresso'
+              />
 
-      <FormLabel>Grams Out</FormLabel>
-        <TextField 
-        value={inputs.output} 
-        onChange={handleChange} 
-        margin='normal' 
-        fullWidth variant='outlined' 
-        name="output" />
+              <FormLabel>Grams Out</FormLabel>
+              <TextField 
+              value={inputs.output} 
+              onChange={handleChange} 
+              margin='normal' 
+              fullWidth variant='outlined' 
+              name="output" 
+              placeholder='Grams of Liquid'
+              />
 
-      <FormLabel>Time</FormLabel>
-        <TextField 
-        value={inputs.time} 
-        onChange={handleChange} 
-        margin='normal' 
-        fullWidth variant='outlined' 
-        name="time" />
+              <FormLabel>Time</FormLabel>
+              <TextField 
+              value={inputs.time} 
+              onChange={handleChange} 
+              margin='normal' 
+              fullWidth variant='outlined' 
+              name="time" 
+              placeholder='Number of Seconds'
+              />
 
-      <FormLabel>TDS</FormLabel>
-        <TextField 
-        value={inputs.tds} 
-        onChange={handleChange} 
-        margin='normal' 
-        fullWidth variant='outlined' 
-        name="tds" />
+              <FormLabel>TDS</FormLabel>
+              <TextField 
+              value={inputs.tds} 
+              onChange={handleChange} 
+              margin='normal' 
+              fullWidth variant='outlined' 
+              name="tds" 
+              placeholder='TDS Results "6.66"'
+              />
 
-    <FormLabel>Percent</FormLabel>
-        <TextField 
-        value={inputs.percent} 
-        onChange={handleChange} 
-        margin='normal' 
-        fullWidth variant='outlined' 
-        name="percent" />
+              <FormLabel>Percent</FormLabel>
+              <TextField 
+              value={inputs.percent} 
+              onChange={handleChange} 
+              margin='normal' 
+              fullWidth variant='outlined' 
+              name="percent" 
+              placeholder='21.00%'
+              />
 
+              <FormLabel>Image</FormLabel>
+              <TextField
+              value={inputs.image}
+              onChange={handleChange}
+              margin="normal"
+              fullWidth
+              variant="outlined"
+              name="image"
+              placeholder='Paste "Copy Image Address" Here'
+              />
 
-    <FormLabel>Image</FormLabel>
-                <TextField
-                value={inputs.image}
-                onChange={handleChange}
-                margin="normal"
-                fullWidth
-                variant="outlined"
-                name="image"
-                />
+              <FormLabel>Notes</FormLabel>
+              <TextField 
+              value={inputs.country} 
+              onChange={handleChange} 
+              margin='normal' 
+              fullWidth variant='outlined' 
+              name="country" 
+              multiline='maxRows'
+              placeholder='Tasting Notes'
+              />
 
-    <FormLabel>Notes</FormLabel>
-        <TextField 
-        value={inputs.country} 
-        onChange={handleChange} 
-        margin='normal' 
-        fullWidth variant='outlined' 
-        name="country" 
-        multiline='maxRows'
-        />
-
-
-      <Button variant='contained' type='submit' >
-          Update Coffee
-      </Button>
-    </Box>
-  </form>
-  )};
-  </div>)
+              <Button variant='contained' type='submit' >
+                  Update Coffee
+              </Button>
+              </Box>
+          </form>
+      )}
+  </div>
+  )
 };
 
 export default CoffeeDetail;
