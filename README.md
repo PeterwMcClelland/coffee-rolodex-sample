@@ -35,7 +35,7 @@ This is a basic program to store coffee information using REST API with CRUD ope
 
 Deployed site: https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/coffees
 
-Repo: https://github.com/PeterwMcClelland/Coffee-Rolodex
+Repo: https://github.com/PeterwMcClelland/coffee-rolodex-sample
 
 ## Questions
 
