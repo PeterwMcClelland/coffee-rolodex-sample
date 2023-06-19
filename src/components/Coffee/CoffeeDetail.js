@@ -137,7 +137,7 @@ const CoffeeDetail = () => {
               margin='normal' 
               fullWidth variant='outlined' 
               name="percent" 
-              placeholder='21.00%'
+              placeholder='AutoFill %'
               />
 
               <FormLabel>Image</FormLabel>

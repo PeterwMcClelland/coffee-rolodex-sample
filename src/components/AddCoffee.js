@@ -129,7 +129,7 @@ import { useNavigate } from 'react-router-dom';
                   margin='normal' 
                   fullWidth variant='outlined' 
                   name="percent" 
-                  placeholder='21.00%'
+                  placeholder='AutoFill %'
               />
 
               <FormLabel>Image</FormLabel>
