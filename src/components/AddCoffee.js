@@ -20,12 +20,17 @@ import { useNavigate } from 'react-router-dom';
      });
      
      const handleChange = (e) => {
-         setInputs((prevState) => ({
-             ...prevState,
-             [e.target.name]: e.target.value
-         }));
-        //  console.log(e.target.name,"value",e.target.value);
-     };
+      const newInputs = {
+          ...inputs,
+          [e.target.name]: e.target.value,
+      };
+
+      if (["output", "tds", "espresso_gs"].includes(e.target.name) && newInputs.output && newInputs.tds && newInputs.espresso_gs) {
+          newInputs.percent = ((Number(newInputs.output) * Number(newInputs.tds)) / Number(newInputs.espresso_gs)).toFixed(2);
+      }
+
+      setInputs(newInputs);
+  };
 
      const sendRequest = async() => {
          axios.post("https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/api/coffees", {
