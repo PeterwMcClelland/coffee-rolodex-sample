@@ -146,45 +146,52 @@ li {
 
 @media (max-width: 450px) {
     .home-h1 {
-        display: none;
+      display: none;
     }
-
+  
     .card {
-        border-radius: 5px;
-        padding: 1rem;
-        width: 300px;
-        display: grid;
-        background-color:rgb(255, 250, 240);
-        height: 100;
-        box-shadow: 5px 5px 10px #ccc;
-        align-items: center;
-        content: "";
+      border-radius: 5px;
+      padding: 1rem;
+      width: 300px;
+      display: grid;
+      background-color: rgb(255, 250, 240);
+      height: 100;
+      box-shadow: 5px 5px 10px #ccc;
+      align-items: center;
+      content: "";
     }
-
+  
     ul {
-        padding-inline-start: 0;
-        padding-left: 20px;
+      padding-inline-start: 0;
+      padding-left: 20px;
     }
-    
-
+  
     .column {
-        
-        width: 100%;
-        text-align-last: center;
+      width: 100%;
+      text-align-last: center;
     }
-
+  
     li {
-        padding: 5px;
-        width: 250px;
-        max-width: 250px;
-        list-style-type: none;
+      padding: 5px;
+      width: 250px;
+      max-width: 250px;
+      list-style-type: none;
     }
-
-    h1, h2, h3 {
-        font-size: medium;
+  
+    h1,
+    h2,
+    h3 {
+      font-size: medium;
     }
-
+  
     li {
-        font-size: small;
+      font-size: small;
     }
+  
+    #tds-layout {
+      display: table;
+      text-align: -webkit-center;
+    }
+  
+    
   }

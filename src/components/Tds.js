@@ -32,6 +32,7 @@ const Tds = () => {
       <header className="home-header"></header>
       <form id="home-form">
         <Box
+          id="tds-layout"
           display="flex"
           flexDirection="table"
           justifyContent={"center"}
@@ -68,7 +69,10 @@ const Tds = () => {
               variant="outlined"
               name="espresso_gs"
               placeholder="Input"
-              inputProps={{ inputMode: 'decimal', pattern: '[0-9]*([.][0-9]+)?' }}
+              inputProps={{
+                inputMode: "decimal",
+                pattern: "[0-9]*([.][0-9]+)?",
+              }}
               sx={{
                 backgroundColor: "#f5f5f5",
                 borderRadius: "8px",
@@ -103,7 +107,10 @@ const Tds = () => {
               variant="outlined"
               name="output"
               placeholder="Output"
-              inputProps={{ inputMode: 'decimal', pattern: '[0-9]*([.][0-9]+)?' }}
+              inputProps={{
+                inputMode: "decimal",
+                pattern: "[0-9]*([.][0-9]+)?",
+              }}
               sx={{
                 backgroundColor: "#f5f5f5",
                 borderRadius: "8px",
@@ -138,7 +145,10 @@ const Tds = () => {
               variant="outlined"
               name="tds"
               placeholder="TDS"
-              inputProps={{ inputMode: 'decimal', pattern: '[0-9]*([.][0-9]+)?' }}
+              inputProps={{
+                inputMode: "decimal",
+                pattern: "[0-9]*([.][0-9]+)?",
+              }}
               sx={{
                 backgroundColor: "#f5f5f5",
                 borderRadius: "8px",
@@ -163,7 +173,7 @@ const Tds = () => {
             alignSelf={"center"}
             marginLeft={"auto"}
             marginRight={"auto"}
-            marginTop={10}
+            marginTop={2}
             marginBottom={2}
           ></Box>
 
@@ -176,7 +186,7 @@ const Tds = () => {
             alignSelf={"center"}
             marginLeft={"auto"}
             marginRight={"auto"}
-            marginTop={10}
+            marginTop={2}
             marginBottom={10}
             sx={{
               borderRadius: "16px",
