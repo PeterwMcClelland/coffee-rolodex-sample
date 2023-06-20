@@ -6,7 +6,6 @@ const Tds = () => {
   const [inputs, setInputs] = useState({
     espresso_gs: "",
     output: "",
-    time: "",
     tds: "",
     percent: "",
   });
@@ -103,40 +102,6 @@ const Tds = () => {
               variant="outlined"
               name="output"
               placeholder="Output"
-              sx={{
-                backgroundColor: "#f5f5f5",
-                borderRadius: "8px",
-                "& .MuiOutlinedInput-root": {
-                  fontFamily: "jost",
-                  opacity: 0.9,
-                  "& fieldset": {
-                    border: "none",
-                  },
-                },
-              }}
-            />
-          </Box>
-
-          <Box
-            display="flex"
-            flexDirection="table"
-            justifyContent={"center"}
-            maxWidth={100}
-            alignContent={"center"}
-            alignSelf={"center"}
-            marginLeft={"10px"}
-            marginRight={"10px"}
-            marginTop={1}
-            marginBottom={1}
-          >
-            <TextField
-              value={inputs.time}
-              onChange={handleInputChange}
-              margin="normal"
-              fullWidth
-              variant="outlined"
-              name="time"
-              placeholder="Time"
               sx={{
                 backgroundColor: "#f5f5f5",
                 borderRadius: "8px",
