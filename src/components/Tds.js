@@ -43,8 +43,8 @@ const Tds = () => {
           marginTop={10}
           marginBottom={10}
           sx={{
-            backgroundColor: "rgba(128, 128, 128, 0.7)",
-            borderRadius: "8px",
+            backgroundColor: "rgba(128, 128, 128, .9)",
+            borderRadius: "3px",
           }}
         >
           <Box
@@ -68,6 +68,7 @@ const Tds = () => {
               variant="outlined"
               name="espresso_gs"
               placeholder="Input"
+              inputProps={{ inputMode: 'decimal', pattern: '[0-9]*([.][0-9]+)?' }}
               sx={{
                 backgroundColor: "#f5f5f5",
                 borderRadius: "8px",
@@ -102,6 +103,7 @@ const Tds = () => {
               variant="outlined"
               name="output"
               placeholder="Output"
+              inputProps={{ inputMode: 'decimal', pattern: '[0-9]*([.][0-9]+)?' }}
               sx={{
                 backgroundColor: "#f5f5f5",
                 borderRadius: "8px",
@@ -136,6 +138,7 @@ const Tds = () => {
               variant="outlined"
               name="tds"
               placeholder="TDS"
+              inputProps={{ inputMode: 'decimal', pattern: '[0-9]*([.][0-9]+)?' }}
               sx={{
                 backgroundColor: "#f5f5f5",
                 borderRadius: "8px",
