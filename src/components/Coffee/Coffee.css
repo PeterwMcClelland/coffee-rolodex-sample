@@ -5,52 +5,53 @@
     background-repeat: repeat;
     background-attachment: fixed;
     background-position: center;
-}
+} */
 
 .background-home {
-    background-image: url(../../assets/images/Guide_to_the_Coffee_Taster_s_Flavour_Wheel.jpg);
-    height: 1000px;
+    background-color: #ccc;
+    height: 1125px;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-
-} */
-
-
-/* Google Fonts */
-
-@import url('https://fonts.googleapis.com/css2?family=Climate+Crisis');
-@import url('https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
-
-
-header {
-    position: sticky; 
+  }
+  
+  /* Google Fonts */
+  
+  @import url("https://fonts.googleapis.com/css2?family=Climate+Crisis");
+  @import url("https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap");
+  @import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
+  
+  header {
+    position: sticky;
     top: 0;
     z-index: 9999;
-}
-
-.home-header {
+  }
+  
+  .home-header {
     text-align: -webkit-center;
     padding-top: 50px;
-}
-
-.home-h1 {
+  }
+  
+  .home-h1 {
     margin: 0px;
     font-size: 100px;
     border-radius: 5px;
     width: -moz-fit-content;
     color: floralwhite;
     padding: 10px;
-    font-family: 'Gasoek One', sans-serif;
+    font-family: "Gasoek One", sans-serif;
     font-size: xxx-large;
-}
-
-/* Search Bar */
-
-.search-bar {
-    font-size: 20px; 
+  }
+  
+  /* .home-percent {
+      font-family: 'Jost', sans-serif !important;
+  } */
+  
+  /* Search Bar */
+  
+  .search-bar {
+    font-size: 20px;
     margin-top: 90px;
     border-radius: 5px;
     position: fixed;
@@ -60,91 +61,127 @@ header {
     right: 0;
     justify-content: center;
     width: 25%;
-    font-family: 'Gasoek One', sans-serif;
+    font-family: "Gasoek One", sans-serif;
     margin-left: 10px;
-}
-
-.search-txt {
-    font-family: 'Jost', sans-serif;
+  }
+  
+  .search-txt {
+    font-family: "Jost", sans-serif;
     height: 25px;
-}
-
-/* Coffee List */
-
-ul {
+  }
+  
+  /* Coffee List */
+  
+  ul {
     display: flex;
     flex-direction: column;
     margin: 0px;
     gap: 10px;
-    font-family: 'Jost', sans-serif;
-}
-
-li {
+    font-family: "Jost", sans-serif;
+  }
+  
+  li {
     padding: 5px;
     width: 250px;
     max-width: 250px;
     /* max-height: 650px; */
     list-style-type: none;
-}
-
-.card {
+  }
+  
+  .card {
     border-radius: 5px;
     padding: 1rem;
-    width:600px;
+    width: 600px;
     margin-top: 35px;
     display: table;
-    background-color:hsl(40, 100%, 97%);
+    background-color: hsl(40, 100%, 97%);
     height: 100;
     box-shadow: 5px 5px 10px rgb(204, 204, 204);
     align-items: center;
     content: "";
-}
-
-.card img {
+  }
+  
+  .card img {
     width: 100%;
   }
-
-.column {
+  
+  .column {
     float: left;
     width: 50%;
-}
-
-.name-txt {
+  }
+  
+  .fleet {
+    font-size: small;
+    font-style: italic;
+    font-family: "Jost", sans-serif;
+  }
+  
+  .name-txt {
     font-size: medium;
     text-align: center;
-}
-
-.brand-txt {
+  }
+  
+  .brand-txt {
     text-align: center;
-}
-
-.delete-button {
+  }
+  
+  .delete-button {
     color: red !important;
-}
-
-/* Add Coffee */
-
-.css-3wzfo5 {
+  }
+  
+  /* Add Coffee */
+  
+  .css-3wzfo5 {
     margin: 20px;
     background-color: floralwhite;
     padding: 30px;
     box-shadow: 5px 5px 10px #ccc;
-}
-
-.addcoffee {
+  }
+  
+  .addcoffee {
     align-self: center;
-}
-
-
-
-@media (max-width: 850px) {
-    .home-h1 {
-        font-size: revert;
+  }
+  
+  /* TDS */
+  
+  .green-text .MuiInputBase-input {
+    color: green;
+    transition: color 0.5s ease;
+    animation: pulse 2s infinite;
+  }
+  
+  .default-text .MuiInputBase-input {
+    color: inherit;
+    transition: color 0.5s ease;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
     }
-}
-
-
-@media (max-width: 450px) {
+  
+    70% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(0.95);
+    }
+  }
+  
+  /* Mobile Friendly */
+  
+  @media (max-width: 850px) {
+    .home-h1 {
+      font-size: revert;
+    }
+  
+    .background {
+      background-size: cover;
+    }
+  }
+  
+  @media (max-width: 450px) {
     .home-h1 {
       display: none;
     }
@@ -192,6 +229,4 @@ li {
       display: table;
       text-align: -webkit-center;
     }
-  
-    
   }

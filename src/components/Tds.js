@@ -10,6 +10,8 @@ const Tds = () => {
     percent: "",
   });
 
+  const [colorClass, setColorClass] = useState("default-text");
+
   const handleInputChange = (event) => {
     setInputs({
       ...inputs,
@@ -24,6 +26,12 @@ const Tds = () => {
         ...prevInputs,
         percent: percent.toFixed(2),
       }));
+
+      if (percent >= 19 && percent <= 21) {
+        setColorClass("green-text");
+      } else {
+        setColorClass("default-text");
+      }
     }
   }, [inputs.espresso_gs, inputs.output, inputs.tds]);
 
@@ -195,7 +203,7 @@ const Tds = () => {
             <TextField
               value={inputs.percent + "%"}
               margin="normal"
-              className="home-percent"
+              className={colorClass}
               fullWidth
               variant="standard"
               name="percent"
@@ -208,10 +216,6 @@ const Tds = () => {
                   fontSize: "75px",
                   textAlign: "center",
                   fontFamily: "jost",
-                  color:
-                    inputs.percent >= 19 && inputs.percent <= 21
-                      ? "green"
-                      : "inherent",
                 },
               }}
             />
