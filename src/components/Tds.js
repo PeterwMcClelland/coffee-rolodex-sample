@@ -10,7 +10,7 @@ const Tds = () => {
     percent: "",
   });
 
-  const [colorClass, setColorClass] = useState("default-text");
+  const [colorClass, setColorClass] = useState("default-text"); 
 
   const handleInputChange = (event) => {
     setInputs({
@@ -37,7 +37,7 @@ const Tds = () => {
 
   return (
     <div>
-      <header className="home-header"></header>
+      <header className="home-header">Total Dissolved Solids</header>
       <form id="home-form">
         <Box
           id="tds-layout"
@@ -49,7 +49,7 @@ const Tds = () => {
           alignSelf={"center"}
           marginLeft={"auto"}
           marginRight={"auto"}
-          marginTop={10}
+          marginTop={1}
           marginBottom={10}
           sx={{
             backgroundColor: "rgba(128, 128, 128, .9)",

@@ -8,225 +8,232 @@
 } */
 
 .background-home {
-    background-color: #ccc;
-    height: 1125px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+  background-color: #ccc;
+  height: 1125px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Climate+Crisis");
+@import url("https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
+.home-header {
+  text-align: -webkit-center;
+  padding-top: 50px;
+  font-family: "Gasoek One", sans-serif;
+  font-size: 50px;
+  color: #232F3D;
+}
+
+.home-h1 {
+  margin: 0px;
+  font-size: 100px;
+  border-radius: 5px;
+  width: -moz-fit-content;
+  color: floralwhite;
+  padding: 10px;
+  font-family: "Gasoek One", sans-serif;
+  font-size: xxx-large;
+}
+
+/* .home-percent {
+    font-family: 'Jost', sans-serif !important;
+} */
+
+/* Search Bar */
+
+.search-bar {
+  font-size: 20px;
+  margin-top: 90px;
+  border-radius: 5px;
+  position: fixed;
+  top: 0;
+  height: 25px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  width: 25%;
+  font-family: "Gasoek One", sans-serif;
+  margin-left: 10px;
+}
+
+.search-txt {
+  font-family: "Jost", sans-serif;
+  height: 25px;
+}
+
+/* Coffee List */
+
+ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  gap: 10px;
+  font-family: "Jost", sans-serif;
+}
+
+li {
+  padding: 5px;
+  width: 250px;
+  max-width: 250px;
+  /* max-height: 650px; */
+  list-style-type: none;
+}
+
+.card {
+  border-radius: 5px;
+  padding: 1rem;
+  width: 600px;
+  margin-top: 35px;
+  display: table;
+  background-color: hsl(40, 100%, 97%);
+  height: 100;
+  box-shadow: 5px 5px 10px rgb(204, 204, 204);
+  align-items: center;
+  content: "";
+}
+
+.card img {
+  width: 100%;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.fleet {
+  font-size: small;
+  font-style: italic;
+  font-family: "Jost", sans-serif;
+}
+
+.name-txt {
+  font-size: medium;
+  text-align: center;
+}
+
+.brand-txt {
+  text-align: center;
+}
+
+.delete-button {
+  color: red !important;
+}
+
+/* Add Coffee */
+
+.css-3wzfo5 {
+  margin: 20px;
+  background-color: floralwhite;
+  padding: 30px;
+  box-shadow: 5px 5px 10px #ccc;
+}
+
+.addcoffee {
+  align-self: center;
+}
+
+/* TDS */
+
+.green-text .MuiInputBase-input {
+  color: green;
+  transition: color 0.5s ease;
+  animation: pulse 2s infinite;
+}
+
+.default-text .MuiInputBase-input {
+  color: inherit;
+  transition: color 0.5s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
   }
-  
-  /* Google Fonts */
-  
-  @import url("https://fonts.googleapis.com/css2?family=Climate+Crisis");
-  @import url("https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap");
-  @import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
-  
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 9999;
+
+  70% {
+    transform: scale(1);
   }
-  
-  .home-header {
-    text-align: -webkit-center;
-    padding-top: 50px;
+
+  100% {
+    transform: scale(0.95);
   }
-  
+}
+
+/* Mobile Friendly */
+
+@media (max-width: 850px) {
   .home-h1 {
-    margin: 0px;
-    font-size: 100px;
-    border-radius: 5px;
-    width: -moz-fit-content;
-    color: floralwhite;
-    padding: 10px;
-    font-family: "Gasoek One", sans-serif;
-    font-size: xxx-large;
+    font-size: revert;
   }
-  
-  /* .home-percent {
-      font-family: 'Jost', sans-serif !important;
-  } */
-  
-  /* Search Bar */
-  
-  .search-bar {
+
+  .background {
+    background-size: cover;
+  }
+}
+
+@media (max-width: 450px) {
+  .home-h1 {
     font-size: 20px;
-    margin-top: 90px;
+  }
+
+  .home-header {
+    font-size: 25px;
+  }
+
+  .card {
     border-radius: 5px;
-    position: fixed;
-    top: 0;
-    height: 25px;
-    left: 0;
-    right: 0;
-    justify-content: center;
-    width: 25%;
-    font-family: "Gasoek One", sans-serif;
-    margin-left: 10px;
+    padding: 1rem;
+    width: 300px;
+    display: grid;
+    background-color: rgb(255, 250, 240);
+    height: 100;
+    box-shadow: 5px 5px 10px #ccc;
+    align-items: center;
+    content: "";
   }
-  
-  .search-txt {
-    font-family: "Jost", sans-serif;
-    height: 25px;
-  }
-  
-  /* Coffee List */
-  
+
   ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0px;
-    gap: 10px;
-    font-family: "Jost", sans-serif;
+    padding-inline-start: 0;
+    padding-left: 20px;
   }
-  
+
+  .column {
+    width: 100%;
+    text-align-last: center;
+  }
+
   li {
     padding: 5px;
     width: 250px;
     max-width: 250px;
-    /* max-height: 650px; */
     list-style-type: none;
   }
-  
-  .card {
-    border-radius: 5px;
-    padding: 1rem;
-    width: 600px;
-    margin-top: 35px;
-    display: table;
-    background-color: hsl(40, 100%, 97%);
-    height: 100;
-    box-shadow: 5px 5px 10px rgb(204, 204, 204);
-    align-items: center;
-    content: "";
-  }
-  
-  .card img {
-    width: 100%;
-  }
-  
-  .column {
-    float: left;
-    width: 50%;
-  }
-  
-  .fleet {
-    font-size: small;
-    font-style: italic;
-    font-family: "Jost", sans-serif;
-  }
-  
-  .name-txt {
+
+  h1,
+  h2,
+  h3 {
     font-size: medium;
-    text-align: center;
   }
-  
-  .brand-txt {
-    text-align: center;
+
+  li {
+    font-size: small;
   }
-  
-  .delete-button {
-    color: red !important;
+
+  #tds-layout {
+    display: table;
+    text-align: -webkit-center;
   }
-  
-  /* Add Coffee */
-  
-  .css-3wzfo5 {
-    margin: 20px;
-    background-color: floralwhite;
-    padding: 30px;
-    box-shadow: 5px 5px 10px #ccc;
-  }
-  
-  .addcoffee {
-    align-self: center;
-  }
-  
-  /* TDS */
-  
-  .green-text .MuiInputBase-input {
-    color: green;
-    transition: color 0.5s ease;
-    animation: pulse 2s infinite;
-  }
-  
-  .default-text .MuiInputBase-input {
-    color: inherit;
-    transition: color 0.5s ease;
-  }
-  
-  @keyframes pulse {
-    0% {
-      transform: scale(0.95);
-    }
-  
-    70% {
-      transform: scale(1);
-    }
-  
-    100% {
-      transform: scale(0.95);
-    }
-  }
-  
-  /* Mobile Friendly */
-  
-  @media (max-width: 850px) {
-    .home-h1 {
-      font-size: revert;
-    }
-  
-    .background {
-      background-size: cover;
-    }
-  }
-  
-  @media (max-width: 450px) {
-    .home-h1 {
-      display: none;
-    }
-  
-    .card {
-      border-radius: 5px;
-      padding: 1rem;
-      width: 300px;
-      display: grid;
-      background-color: rgb(255, 250, 240);
-      height: 100;
-      box-shadow: 5px 5px 10px #ccc;
-      align-items: center;
-      content: "";
-    }
-  
-    ul {
-      padding-inline-start: 0;
-      padding-left: 20px;
-    }
-  
-    .column {
-      width: 100%;
-      text-align-last: center;
-    }
-  
-    li {
-      padding: 5px;
-      width: 250px;
-      max-width: 250px;
-      list-style-type: none;
-    }
-  
-    h1,
-    h2,
-    h3 {
-      font-size: medium;
-    }
-  
-    li {
-      font-size: small;
-    }
-  
-    #tds-layout {
-      display: table;
-      text-align: -webkit-center;
-    }
-  }
+}
