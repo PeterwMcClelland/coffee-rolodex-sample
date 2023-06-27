@@ -75,6 +75,13 @@ header {
 
 /* Coffee List */
 
+.loading-bar {
+  text-align: center;
+  font-family: "Jost", sans-serif;
+  font-size: xx-large;
+  padding-top: 25px;
+}
+
 ul {
   display: flex;
   flex-direction: column;

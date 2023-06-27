@@ -24,7 +24,7 @@ export const Header = () => {
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <NavLink to="/" style={{ textDecoration: "none", color: "inherit" }}>
             <h1 className="home-h1">
-              Coffee Rolodex<span className="fleet"> Fleet Co.</span>
+              Coffee Rolodex
             </h1>
           </NavLink>
 

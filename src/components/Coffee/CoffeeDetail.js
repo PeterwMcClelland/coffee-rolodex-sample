@@ -5,23 +5,29 @@ import { Button, FormLabel, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 
 const CoffeeDetail = () => {
-  const [inputs, setInputs] = useState({});
+  const [inputs, setInputs] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const id = useParams().id;
-  const history = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchHandler = async () => {
-      await axios
-        .get(`https://coffee-rolodex.herokuapp.com/api/coffees/${id}`)
-        .then((res) => res.data)
-        .then((data) => setInputs(data.coffee));
+      try {
+        const res = await axios.get(`https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/api/coffees/${id}`);
+        setInputs(res.data.coffee);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
     };
     fetchHandler();
   }, [id]);
 
   const sendRequest = async () => {
-    await axios
-      .put(`https://coffee-rolodex.herokuapp.com/api/coffees/${id}`, {
+    try {
+      await axios.put(`https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/api/coffees/${id}`, {
         name: String(inputs.name),
         brand: String(inputs.brand),
         country: String(inputs.country),
@@ -31,13 +37,15 @@ const CoffeeDetail = () => {
         tds: String(inputs.tds),
         percent: String(inputs.percent),
         image: String(inputs.image),
-      })
-      .then((res) => res.data);
+      });
+    } catch (err) {
+      setError(err.message);
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendRequest().then(() => history("/coffees"));
+    sendRequest().then(() => navigate("/coffees"));
   };
 
   const handleChange = (e) => {
@@ -63,7 +71,11 @@ const CoffeeDetail = () => {
 
   return (
     <div>
-      {inputs && (
+      {loading ? (
+        <div className="loading-bar">Loading...</div>
+      ) : error ? (
+        <div>Error: {error}</div>
+      ) : inputs && (
         <form onSubmit={handleSubmit}>
           <Box
             display="flex"
@@ -150,12 +162,14 @@ const CoffeeDetail = () => {
             <FormLabel>Percent</FormLabel>
             <TextField
               value={inputs.percent}
-              onChange={handleChange}
               margin="normal"
               fullWidth
               variant="outlined"
               name="percent"
               placeholder="AutoFill %"
+              InputProps={{
+                readOnly: true,
+              }}
             />
 
             <FormLabel>Image</FormLabel>
