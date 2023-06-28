@@ -3,7 +3,7 @@ import { AppBar, Tab, Tabs, Toolbar, Accordion, AccordionSummary, AccordionDetai
 import { NavLink } from "react-router-dom";
 
 export const Header = () => {
-  const [value, setValue] = useState();
+  const [value, setValue] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 450);
 
   useEffect(() => {

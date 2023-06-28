@@ -5,40 +5,44 @@ const Schema = mongoose.Schema;
 const coffeeSchema = new Schema({
     name: {
         type: String,
-        require: true
+        required: true
     },
     brand: {
         type: String,
-        require: true
+        required: true
     },
     country: {
         type: String,
-        require: true
+        required: true
     },
     espresso_gs: {
         type: String,
-        require: true
+        required: true
     },
     output: {
         type: String,
-        require: true
+        required: true
     },
     time: {
         type: String,
-        require: true
+        required: true
     },
     tds: {
         type: String,
-        require: true
+        required: true
     },
     percent: {
         type: String,
-        require: true
+        required: true
     },
     image: {
         type: String,
         required: false,
       },
+      roast: {
+        type: Date,
+        required: true
+    },
 });
 
 module.exports = mongoose.model("coffee", coffeeSchema);

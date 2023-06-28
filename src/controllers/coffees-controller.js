@@ -31,7 +31,7 @@ const getById = async(req,res,next) => {
 };
 
 const addCoffee = async (req,res,next) => {
-    const {name, brand, country, espresso_gs, output, time, tds, percent, image} = req.body;
+    const {name, brand, country, espresso_gs, output, time, tds, percent, image, roast} = req.body;
     let coffee;
     try {
         coffee = new Coffee({
@@ -43,7 +43,8 @@ const addCoffee = async (req,res,next) => {
             time,
             tds,
             percent,
-            image
+            image,
+            roast
         });
         await coffee.save();
     }catch (err){
@@ -58,7 +59,7 @@ const addCoffee = async (req,res,next) => {
 
 const updateCoffee = async (req, res, next) => {
     const id = req.params.id;
-    const {name, brand, country, espresso_gs, output, time, tds, percent, image} = req.body;
+    const {name, brand, country, espresso_gs, output, time, tds, percent, image, roast} = req.body;
     let coffee;
     try {
         coffee = await Coffee.findByIdAndUpdate(id, {
@@ -70,7 +71,8 @@ const updateCoffee = async (req, res, next) => {
             time,
             tds,
             percent,
-            image
+            image,
+            roast
         },{ new: true });
         
     } catch (err) {

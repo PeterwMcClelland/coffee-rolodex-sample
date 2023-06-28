@@ -4,7 +4,7 @@ import "./Coffee.css";
 import { Link } from 'react-router-dom';
 
 const Coffee = (props) => {
-    const { _id, name, brand, espresso_gs, output, time, tds, percent, country, image} = props.coffee;
+    const { _id, name, brand, espresso_gs, output, time, tds, percent, country, roast, image} = props.coffee;
 
     return (
         <div className='card'>
@@ -17,6 +17,7 @@ const Coffee = (props) => {
             <div className='column'>
                 <ul >
                     <li>Notes: {country}</li>
+                    <li>Roast Date: {roast}</li>
                     <li>Input: {espresso_gs}g</li>
                     <li>Output: {output}g</li>
                     <li>Time: {time}s</li>
