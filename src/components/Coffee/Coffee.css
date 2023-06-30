@@ -226,6 +226,12 @@ li {
     font-size: 15px;
   }
 
+  .card.slideFromRight {
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+
   .home-header {
     font-size: 25px;
   }
