@@ -43,8 +43,7 @@ const addCoffee = async (req,res,next) => {
             time,
             tds,
             percent,
-            image,
-            roast
+            image
         });
         await coffee.save();
     }catch (err){
@@ -72,7 +71,6 @@ const updateCoffee = async (req, res, next) => {
             tds,
             percent,
             image,
-            roast
         },{ new: true });
         
     } catch (err) {

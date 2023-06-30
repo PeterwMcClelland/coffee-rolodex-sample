@@ -39,10 +39,6 @@ const coffeeSchema = new Schema({
         type: String,
         required: false,
       },
-      roast: {
-        type: Date,
-        required: true
-    },
 });
 
 module.exports = mongoose.model("coffee", coffeeSchema);

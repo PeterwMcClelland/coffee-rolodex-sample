@@ -15,8 +15,7 @@ const AddCoffee = () => {
     time: '',
     tds: '',
     percent: '',
-    image: '',
-    roast: ''
+    image: ''
   });
 
   const handleChange = (e) => {
@@ -51,8 +50,7 @@ const AddCoffee = () => {
         time: String(inputs.time),
         tds: String(inputs.tds),
         percent: String(inputs.percent),
-        image: String(inputs.image),
-        roast: Date(inputs.roast)
+        image: String(inputs.image)
       })
       .then((res) => res.data);
   };
@@ -97,18 +95,6 @@ const AddCoffee = () => {
           variant="outlined"
           name="brand"
           placeholder='Example "Sweet Bloom"'
-        />
-
-        <FormLabel>Roast Date</FormLabel>
-        <TextField
-        type="date"
-          value={inputs.roast}
-          onChange={handleChange}
-          margin="normal"
-          fullWidth
-          variant="outlined"
-          name="roast"
-          placeholder='Example "Dark Roast"'
         />
 
         <FormLabel>Grams In</FormLabel>

@@ -16,7 +16,7 @@ const CoffeeDetail = () => {
     tds: '',
     percent: '',
     image: '',
-    roast: ''
+    
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -53,7 +53,6 @@ const CoffeeDetail = () => {
           tds: String(inputs.tds),
           percent: String(inputs.percent),
           image: String(inputs.image),
-          roast: String(inputs.roast)
         }
       );
     } catch (err) {
@@ -128,17 +127,6 @@ const CoffeeDetail = () => {
                 variant="outlined"
                 name="brand"
                 placeholder='Example "Sweet Bloom"'
-              />
-                <FormLabel>Roast Date</FormLabel>
-              <TextField
-                type="date"
-                value={inputs.roast}
-                onChange={handleChange}
-                margin="normal"
-                fullWidth
-                variant="outlined"
-                name="roast"
-                placeholder='Example "Medium Roast"'
               />
 
               <FormLabel>Grams In</FormLabel>

@@ -21,6 +21,7 @@
     "express": "^4.18.2",
     "hash-router": "^0.4.0",
     "mongoose": "^7.2.1",
+    "react-scroll-trigger": "^0.6.14",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-medium-image-zoom": "^5.1.2",
