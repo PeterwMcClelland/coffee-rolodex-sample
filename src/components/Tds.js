@@ -3,12 +3,17 @@ import { TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-
+import ScrollTrigger from 'react-scroll-trigger';
 import Wheelflavor from "../assets/PDF/50384.jpg";
 
 const wheel = <FontAwesomeIcon icon={faCircleInfo} />;
 
 const Tds = () => {
+  const [ animation, setAnimation] = useState(false);
+
+  const onEnterViewport = () => {
+    setAnimation(true);
+  }
   const [inputs, setInputs] = useState({
     espresso_gs: "",
     output: "",
@@ -42,7 +47,8 @@ const Tds = () => {
   }, [inputs.espresso_gs, inputs.output, inputs.tds]);
 
   return (
-    <div>
+    <div className={`tds-main ${animation ? 'slideInFromLeft-tds-main' : ''}`}>
+    <ScrollTrigger onEnter={onEnterViewport} ></ScrollTrigger>
       <header className="home-header">Total Dissolved Solids</header>
       <form id="home-form">
         <Box

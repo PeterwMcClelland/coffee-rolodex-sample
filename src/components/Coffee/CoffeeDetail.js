@@ -3,8 +3,14 @@ import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button, FormLabel, TextField } from "@mui/material";
 import { Box } from "@mui/system";
+import ScrollTrigger from "react-scroll-trigger";
 
 const CoffeeDetail = () => {
+  const [animation, setAnimation] = useState(false);
+
+  const onEnterViewport = () => {
+    setAnimation(true);
+  };
   const [inputs, setInputs] = useState({
     name: "",
     brand: "",
@@ -85,7 +91,8 @@ const CoffeeDetail = () => {
   };
 
   return (
-    <div>
+    <div className={`details ${animation ? "liftIntoPlace-details" : ""}`}>
+    <ScrollTrigger onEnter={onEnterViewport}></ScrollTrigger>
       {loading ? (
         <div className="loading-bar">Loading...</div>
       ) : error ? (

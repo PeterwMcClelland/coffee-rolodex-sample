@@ -3,8 +3,14 @@ import { Box } from "@mui/system";
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import ScrollTrigger from "react-scroll-trigger";
 
 const AddCoffee = () => {
+  const [animation, setAnimation] = useState(false);
+
+  const onEnterViewport = () => {
+    setAnimation(true);
+  };
   const history = useNavigate();
   const [inputs, setInputs] = useState({
     name: "",
@@ -65,7 +71,11 @@ const AddCoffee = () => {
   };
 
   return (
-    <form className="addcoffee" onSubmit={handleSubmit}>
+    <ScrollTrigger onEnter={onEnterViewport}>
+      <form
+        className={`addcoffee ${animation ? "liftIntoPlace-addcoffee" : ""}`}
+        onSubmit={handleSubmit}
+      >
       <Box
         display="flex"
         flexDirection="column"
@@ -188,7 +198,9 @@ const AddCoffee = () => {
         </Button>
       </Box>
     </form>
+    </ScrollTrigger>
   );
+    
 };
 
 export default AddCoffee;

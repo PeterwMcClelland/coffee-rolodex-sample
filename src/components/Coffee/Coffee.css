@@ -168,6 +168,40 @@ li {
   align-self: center;
 }
 
+.liftIntoPlace-addcoffee {
+  animation: liftIntoPlace-addcoffee 1.25s forwards;
+  display: flow-root;
+}
+
+@keyframes liftIntoPlace-addcoffee {
+  from {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Coffee Details */
+
+.liftIntoPlace-details {
+  animation: liftIntoPlace-details 1.25s forwards;
+  display: flow-root;
+}
+
+@keyframes liftIntoPlace-details {
+  from {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 /* TDS */
 
 .flavorwheel {
@@ -206,6 +240,21 @@ li {
 
   100% {
     transform: scale(0.95);
+  }
+}
+
+.slideInFromLeft-tds-main {
+  animation: slideInFromLeft 1.25s forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
