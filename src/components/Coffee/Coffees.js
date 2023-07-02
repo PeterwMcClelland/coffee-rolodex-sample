@@ -15,7 +15,9 @@ const fetchHandler = async () => {
 const deleteHandler = async (id, setCoffees) => {
   if (window.confirm("Are you sure you want to delete?")) {
     await axios
-      .delete(`https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/api/coffees/${id}`)
+      .delete(
+        `https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/api/coffees/${id}`
+      )
       .then((res) => res.data)
       .then(() => fetchHandler().then((data) => setCoffees(data.coffees)));
   }

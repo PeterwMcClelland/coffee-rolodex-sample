@@ -9,6 +9,4 @@ router.get("/:id", coffeesController.getById);
 router.put("/:id", coffeesController.updateCoffee);
 router.delete("/:id", coffeesController.deleteCoffee);
 
-
-
 module.exports = router;

@@ -5,18 +5,16 @@ import { Button, FormLabel, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 
 const CoffeeDetail = () => {
-  
   const [inputs, setInputs] = useState({
-    name: '',
-    brand: '',
-    country: '',
-    espresso_gs: '',
-    output: '',
-    time: '',
-    tds: '',
-    percent: '',
-    image: '',
-    
+    name: "",
+    brand: "",
+    country: "",
+    espresso_gs: "",
+    output: "",
+    time: "",
+    tds: "",
+    percent: "",
+    image: "",
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -221,7 +219,8 @@ const CoffeeDetail = () => {
                 fullWidth
                 variant="outlined"
                 name="country"
-                multiline maxRows={4}
+                multiline
+                maxRows={4}
                 placeholder="Tasting Notes"
               />
 

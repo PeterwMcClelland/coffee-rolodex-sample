@@ -7,15 +7,15 @@ import { useNavigate } from "react-router-dom";
 const AddCoffee = () => {
   const history = useNavigate();
   const [inputs, setInputs] = useState({
-    name: '',
-    brand: '',
-    country: '',
-    espresso_gs: '',
-    output: '',
-    time: '',
-    tds: '',
-    percent: '',
-    image: ''
+    name: "",
+    brand: "",
+    country: "",
+    espresso_gs: "",
+    output: "",
+    time: "",
+    tds: "",
+    percent: "",
+    image: "",
   });
 
   const handleChange = (e) => {
@@ -41,17 +41,20 @@ const AddCoffee = () => {
 
   const sendRequest = async () => {
     axios
-      .post("https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/api/coffees", {
-        name: String(inputs.name),
-        brand: String(inputs.brand),
-        country: String(inputs.country),
-        espresso_gs: String(inputs.espresso_gs),
-        output: String(inputs.output),
-        time: String(inputs.time),
-        tds: String(inputs.tds),
-        percent: String(inputs.percent),
-        image: String(inputs.image)
-      })
+      .post(
+        "https://coffee-rolodex-sample-557eeaac3267.herokuapp.com/api/coffees",
+        {
+          name: String(inputs.name),
+          brand: String(inputs.brand),
+          country: String(inputs.country),
+          espresso_gs: String(inputs.espresso_gs),
+          output: String(inputs.output),
+          time: String(inputs.time),
+          tds: String(inputs.tds),
+          percent: String(inputs.percent),
+          image: String(inputs.image),
+        }
+      )
       .then((res) => res.data);
   };
 
@@ -175,7 +178,8 @@ const AddCoffee = () => {
           fullWidth
           variant="outlined"
           name="country"
-          multiline maxRows={4}
+          multiline
+          maxRows={4}
           placeholder="Tasting Notes"
         />
 

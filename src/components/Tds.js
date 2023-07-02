@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { TextField } from "@mui/material";
 import { Box } from "@mui/system";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleInfo } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
-
-import Wheelflavor from '../assets/PDF/50384.jpg';
+import Wheelflavor from "../assets/PDF/50384.jpg";
 
 const wheel = <FontAwesomeIcon icon={faCircleInfo} />;
 
@@ -17,7 +16,7 @@ const Tds = () => {
     percent: "",
   });
 
-  const [colorClass, setColorClass] = useState("default-text"); 
+  const [colorClass, setColorClass] = useState("default-text");
 
   const handleInputChange = (event) => {
     setInputs({
@@ -229,7 +228,11 @@ const Tds = () => {
           </Box>
         </Box>
       </form>
-      <div className="flavorwheel"><a className="wheellink" href={Wheelflavor} target="blank">FlavorWheel {wheel}</a></div>
+      <div className="flavorwheel">
+        <a className="wheellink" href={Wheelflavor} target="blank">
+          FlavorWheel {wheel}
+        </a>
+      </div>
     </div>
   );
 };

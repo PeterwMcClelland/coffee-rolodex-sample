@@ -1,5 +1,14 @@
 import React, { useState, useEffect } from "react";
-import { AppBar, Tab, Tabs, Toolbar, Accordion, AccordionSummary, AccordionDetails, Typography } from "@mui/material";
+import {
+  AppBar,
+  Tab,
+  Tabs,
+  Toolbar,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  Typography,
+} from "@mui/material";
 import { NavLink } from "react-router-dom";
 
 export const Header = () => {
@@ -11,10 +20,10 @@ export const Header = () => {
       setIsMobile(window.innerWidth <= 450);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -23,24 +32,37 @@ export const Header = () => {
       <AppBar sx={{ backgroundColor: "#232F3D" }} position="sticky">
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <NavLink to="/" style={{ textDecoration: "none", color: "inherit" }}>
-            <h1 className="home-h1">
-              Coffee Rolodex
-            </h1>
+            <h1 className="home-h1">Coffee Rolodex</h1>
           </NavLink>
 
           {isMobile ? (
-            <Accordion sx={{backgroundColor: 'transparent', boxShadow: 'none', color: 'inherit'}}>
+            <Accordion
+              sx={{
+                backgroundColor: "transparent",
+                boxShadow: "none",
+                color: "inherit",
+              }}
+            >
               <AccordionSummary>
                 <Typography>Menu</Typography>
               </AccordionSummary>
               <AccordionDetails>
-                <NavLink to="/tds" style={{ textDecoration: "none", color: "inherit" }}>
+                <NavLink
+                  to="/tds"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
                   <Typography>TDS</Typography>
                 </NavLink>
-                <NavLink to="/coffees" style={{ textDecoration: "none", color: "inherit" }}>
+                <NavLink
+                  to="/coffees"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
                   <Typography>All Coffees</Typography>
                 </NavLink>
-                <NavLink to="/add" style={{ textDecoration: "none", color: "inherit" }}>
+                <NavLink
+                  to="/add"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
                   <Typography>Add Coffee</Typography>
                 </NavLink>
               </AccordionDetails>
@@ -63,6 +85,5 @@ export const Header = () => {
     </div>
   );
 };
-
 
 export default Header;
