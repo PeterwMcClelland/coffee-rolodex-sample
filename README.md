@@ -16,7 +16,7 @@ This is a basic program to store coffee information using REST API with CRUD ope
 
 ## ScreenShot
 
-[![Screenshot-2023-06-14-at-9-12-17-PM.png](https://i.postimg.cc/jC0khdrb/Screenshot-2023-06-14-at-9-12-17-PM.png)](https://postimg.cc/Cn7Nh01P)
+[![Screenshot-2023-07-09-at-3-23-24-PM.png](https://i.postimg.cc/C59by3Fx/Screenshot-2023-07-09-at-3-23-24-PM.png)](https://postimg.cc/bSHZkFD7)
 
 
 ## How to run 
