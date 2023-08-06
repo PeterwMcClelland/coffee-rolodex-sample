@@ -1,12 +1,16 @@
 import { Button, FormLabel, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ScrollTrigger from "react-scroll-trigger";
 
 const AddCoffee = () => {
   const [animation, setAnimation] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const onEnterViewport = () => {
     setAnimation(true);
