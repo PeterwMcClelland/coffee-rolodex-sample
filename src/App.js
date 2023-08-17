@@ -17,7 +17,7 @@ function App() {
 
         <main>
           <Routes>
-            <Route path="/" />
+            <Route path="/" element={<Navigate to="/coffees" />} />
             <Route path="/tds" element={<Tds />} />
             <Route path="/add" element={<AddCoffee />} />
             <Route path="/coffees" element={<Coffees />} />
