@@ -72,6 +72,8 @@ header {
 .search-txt {
   font-family: "Jost", sans-serif;
   height: 25px;
+  padding-left: 5px;
+  font-style: italic;
 }
 
 /* Coffee List */
