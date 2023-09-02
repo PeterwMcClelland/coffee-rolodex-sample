@@ -4,6 +4,10 @@ import "./Coffee.css";
 import ScrollTrigger from "react-scroll-trigger";
 import { Link } from "react-router-dom";
 
+const handleMessage = () => {
+  alert("For this demo the Delete feature has been deactivated.");
+};
+
 const Coffee = (props) => {
   const [animation, setAnimation] = useState(false);
 
@@ -46,9 +50,13 @@ const Coffee = (props) => {
       <Button component={Link} to={`/coffees/${_id}`}>
         Update
       </Button>
-      <Button className="delete-button" onClick={props.deleteHandler}>
-        Delete
-      </Button>
+      <Button
+            className="delete-button"
+            /*onClick={props.deleteHandler}*/ onClick={handleMessage}
+            onTouchEnd={handleMessage}
+          >
+            Delete
+          </Button>
     </div>
   );
 };
