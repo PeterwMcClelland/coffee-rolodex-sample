@@ -51,12 +51,12 @@ const Coffee = (props) => {
         Update
       </Button>
       <Button
-            className="delete-button"
-            /*onClick={props.deleteHandler}*/ onClick={handleMessage}
-            onTouchEnd={handleMessage}
-          >
-            Delete
-          </Button>
+        className="delete-button"
+        /*onClick={props.deleteHandler}*/ onClick={handleMessage}
+        onTouchEnd={handleMessage}
+      >
+        Delete
+      </Button>
     </div>
   );
 };
