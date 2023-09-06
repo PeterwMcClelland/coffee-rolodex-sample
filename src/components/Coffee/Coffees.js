@@ -31,6 +31,17 @@ const Coffees = () => {
     fetchHandler().then((data) => setCoffees(data.coffees));
   }, []);
 
+  useEffect(() => {
+    const savedSearchTerm = localStorage.getItem("coffeeSearchTerm");
+    if (savedSearchTerm) {
+      setSearchTerm(savedSearchTerm);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("coffeeSearchTerm", searchTerm);
+  }, [searchTerm]);
+
   if (coffees) {
     console.log(coffees);
   }
