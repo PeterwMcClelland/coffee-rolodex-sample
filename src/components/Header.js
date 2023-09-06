@@ -15,8 +15,8 @@ export const Header = () => {
   const [value, setValue] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 450);
 
-  const [lastScrollY, setLastScrollY] = useState(0);
-  const [showNav, setShowNav] = useState(true);
+  // const [lastScrollY, setLastScrollY] = useState(0);
+  // const [showNav, setShowNav] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,26 +30,26 @@ export const Header = () => {
     };
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY) {
-        setShowNav(false);
-      } else {
-        setShowNav(true);
-      }
-      setLastScrollY(currentScrollY);
-    };
+  //     if (currentScrollY > lastScrollY) {
+  //       setShowNav(false);
+  //     } else {
+  //       setShowNav(true);
+  //     }
+  //     setLastScrollY(currentScrollY);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [lastScrollY]);
 
   return (
-    <div className={`nav_bar ${showNav ? "" : "nav-hidden"}`}>
+    <div>
       <AppBar sx={{ backgroundColor: "#232F3D" }} position="sticky">
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <NavLink to="/" style={{ textDecoration: "none", color: "inherit" }}>
