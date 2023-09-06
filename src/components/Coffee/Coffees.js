@@ -42,6 +42,17 @@ const Coffees = () => {
     localStorage.setItem("coffeeSearchTerm", searchTerm);
   }, [searchTerm]);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setSearchTerm("");
+      localStorage.removeItem("coffeeSearchTerm");
+    }, 3600000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [searchTerm]);
+
   if (coffees) {
     console.log(coffees);
   }
