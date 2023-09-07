@@ -38,7 +38,7 @@ const Coffee = (props) => {
 
       <div className="column">
         <ul>
-          <li>Notes: {country}</li>
+          <li id="notes">Notes: {country}</li>
           <li>Input: {espresso_gs}g</li>
           <li>Output: {output}g</li>
           <li>Time: {time}s</li>
