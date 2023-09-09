@@ -92,7 +92,7 @@ const CoffeeDetail = () => {
 
   return (
     <div className={`details ${animation ? "liftIntoPlace-details" : ""}`}>
-    <ScrollTrigger onEnter={onEnterViewport}></ScrollTrigger>
+      <ScrollTrigger onEnter={onEnterViewport}></ScrollTrigger>
       {loading ? (
         <div className="loading-bar">Loading...</div>
       ) : error ? (
