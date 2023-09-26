@@ -28,7 +28,7 @@ header {
 }
 
 .nav_bar {
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .nav-hidden {
