@@ -12,6 +12,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Climate+Crisis");
 @import url("https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Vina+Sans&display=swap");
 
 header {
   position: sticky;
@@ -43,7 +44,7 @@ header {
   width: -moz-fit-content;
   color: floralwhite;
   padding: 10px;
-  font-family: "Gasoek One", sans-serif;
+  font-family: "Vina Sans", sans-serif;
   font-size: xxx-large;
 }
 
