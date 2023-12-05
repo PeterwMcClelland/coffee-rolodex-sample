@@ -47,18 +47,10 @@ const Coffee = (props) => {
         </ul>
       </div>
 
-      <Button
-        sx={{ fontFamily: "monospace" }}
-        component={Link}
-        to={`/coffees/${_id}`}
-      >
+      <Button sx={{ fontFamily: "monospace" }} component={Link} to={`/coffees/${_id}`}>
         Update
       </Button>
-      <Button
-        sx={{ fontFamily: "monospace" }}
-        className="delete-button"
-        /*onClick={props.deleteHandler}*/ onClick={handleMessage}
-        onTouchEnd={handleMessage}
+      <Button sx={{ fontFamily: "monospace" }} className="delete-button" /*onClick={props.deleteHandler}*/ onClick={handleMessage} onTouchEnd={handleMessage}
       >
         Delete
       </Button>
