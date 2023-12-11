@@ -90,15 +90,31 @@ export const Header = () => {
             </Accordion>
           ) : (
             <Tabs
-              sx={{ ml: "auto" }}
+              sx={{ ml: "auto"  }}
               textColor="inherit"
               indicatorColor="secondary"
               value={value}
               onChange={(e, val) => setValue(val)}
             >
-              <Tab LinkComponent={NavLink} to="/tds" label="TDS" />
-              <Tab LinkComponent={NavLink} to="/coffees" label="All Coffees" />
-              <Tab LinkComponent={NavLink} to="/add" label="Add Coffee" />
+              <Tab
+                LinkComponent={NavLink}
+                sx={{ fontFamily: "Vina Sans", fontSize: 'large' }}
+                to="/coffees"
+                label="All Coffees"
+                value={0}
+              />
+              <Tab
+                LinkComponent={NavLink}
+                sx={{ fontFamily: "Vina Sans", fontSize: 'large' }}
+                to="/add"
+                label="Add Coffee"
+                value={1}
+              />
+              <Tab 
+              LinkComponent={NavLink} 
+              sx={{ fontFamily: "Vina Sans", fontSize: 'large' }}
+              to="/tds" 
+              label="TDS" value={2} />
             </Tabs>
           )}
         </Toolbar>
