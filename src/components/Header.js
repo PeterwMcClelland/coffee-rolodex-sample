@@ -98,21 +98,21 @@ export const Header = () => {
             >
               <Tab
                 LinkComponent={NavLink}
-                sx={{ fontFamily: "Vina Sans", fontSize: 'large' }}
+                sx={{ fontFamily: "Vina Sans", fontSize: 'x-large' }}
                 to="/coffees"
                 label="All Coffees"
                 value={0}
               />
               <Tab
                 LinkComponent={NavLink}
-                sx={{ fontFamily: "Vina Sans", fontSize: 'large' }}
+                sx={{ fontFamily: "Vina Sans", fontSize: 'x-large' }}
                 to="/add"
                 label="Add Coffee"
                 value={1}
               />
               <Tab 
               LinkComponent={NavLink} 
-              sx={{ fontFamily: "Vina Sans", fontSize: 'large' }}
+              sx={{ fontFamily: "Vina Sans", fontSize: 'x-large' }}
               to="/tds" 
               label="TDS" value={2} />
             </Tabs>
