@@ -1,4 +1,3 @@
-// const { request } = require("express");
 const Coffee = require("../model/coffee");
 
 const getAllCoffees = async (req, res, next) => {
