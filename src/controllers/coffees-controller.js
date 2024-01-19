@@ -81,7 +81,6 @@ const updateCoffee = async (req, res, next) => {
   } = req.body;
   let coffee;
   try {
-  
     coffee = await Coffee.findByIdAndUpdate(
       id,
       {
