@@ -107,6 +107,7 @@ ul {
   margin: 0px;
   gap: 10px;
   font-family: "Jost", sans-serif;
+  
 }
 
 li {
@@ -174,6 +175,7 @@ li {
 .liftIntoPlace-addcoffee {
   animation: liftIntoPlace-addcoffee 1.25s forwards;
   display: flow-root;
+
 }
 
 @keyframes liftIntoPlace-addcoffee {

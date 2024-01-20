@@ -5,6 +5,7 @@ import { Button, FormLabel, TextField } from "@mui/material";
 import { Box } from "@mui/system";
 import ScrollTrigger from "react-scroll-trigger";
 
+
 const CoffeeDetail = () => {
   const [animation, setAnimation] = useState(false);
 
@@ -121,6 +122,7 @@ const CoffeeDetail = () => {
                 variant="outlined"
                 name="name"
                 placeholder='Example "NAMBALLE - Cajamarca, Peru"'
+              
               />
 
               <FormLabel>Roaster</FormLabel>
@@ -132,6 +134,7 @@ const CoffeeDetail = () => {
                 variant="outlined"
                 name="brand"
                 placeholder='Example "Sweet Bloom"'
+                
               />
 
               <FormLabel>Grams In</FormLabel>

@@ -39,7 +39,6 @@ const addCoffee = async (req, res, next) => {
     tds,
     percent,
     image,
-    roast,
   } = req.body;
   let coffee;
   try {
@@ -77,7 +76,6 @@ const updateCoffee = async (req, res, next) => {
     tds,
     percent,
     image,
-    roast,
   } = req.body;
   let coffee;
   try {
