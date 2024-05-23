@@ -171,6 +171,7 @@ const AddCoffee = () => {
             variant="outlined"
             name="percent"
             placeholder="AutoFill %"
+            
           />
 
           <FormLabel>Image</FormLabel>

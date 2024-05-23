@@ -64,7 +64,7 @@ const Tds = () => {
           marginTop={1}
           marginBottom={10}
           sx={{
-            backgroundColor: "rgba(128, 128, 128, .9)",
+            backgroundColor: "rgba(128, 128, 128, .95)",
             borderRadius: "3px",
           }}
         >
