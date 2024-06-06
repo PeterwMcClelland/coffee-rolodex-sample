@@ -13,6 +13,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Gasoek+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Vina+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap'); /*font-family: "Chakra Petch", sans-serif;*/
 
 header {
   position: sticky;
@@ -23,8 +24,11 @@ header {
 .home-header {
   text-align: -webkit-center;
   padding-top: 50px;
-  font-family: "Gasoek One", sans-serif;
-  font-size: 50px;
+  /* font-family: "Gasoek One", sans-serif; */
+  font-family: "Chakra Petch", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 70px;
   color: #232f3d;
 }
 

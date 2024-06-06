@@ -49,7 +49,7 @@ const Tds = () => {
   return (
     <div className={`tds-main ${animation ? "slideInFromLeft-tds-main" : ""}`}>
       <ScrollTrigger onEnter={onEnterViewport}></ScrollTrigger>
-      <header className="home-header">Total Dissolved Solids</header>
+      <header className="home-header">TDS</header>
       <form id="home-form">
         <Box
           id="tds-layout"
