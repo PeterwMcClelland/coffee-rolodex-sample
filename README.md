@@ -7,7 +7,7 @@ This is a basic program to store coffee information using REST API with CRUD ope
 ## Technologies used
 
 - Node.js
-- Axios 
+- Axios
 - REACT
 - Express
 - Mongodb
@@ -18,18 +18,19 @@ This is a basic program to store coffee information using REST API with CRUD ope
 
 [![Screenshot-2023-12-13-at-7-09-35-PM.png](https://i.postimg.cc/8C2fFJVt/Screenshot-2023-12-13-at-7-09-35-PM.png)](https://postimg.cc/FfxH8KzL)
 
-
-## How to run 
+## How to run
 
 1. Download this software to your machine, e.g. `git clone PeterwMcClelland/coffee-rolodex-sample`
 2. Navigate into the directory, e.g. `cd coffee-rolodex`
 3. Install the dependencies, e.g. `npm i`
 4. Set up MongoDB. Create cluster in MongoDB, (https://www.mongodb.com/)
-- Create DataBase called `coffee` 
+
+- Create DataBase called `coffee`
 - Create Collection called `coffees`
+
 6. Run the backend folder, `npm run start:frontend`
 7. In new terminal run `node server.js`
-9. App should start running locally.
+8. App should start running locally.
 
 ## site
 
@@ -41,5 +42,6 @@ Repo: https://github.com/PeterwMcClelland/coffee-rolodex-sample
 
 If you have any questions, or issues, please contact peterwmcclelland@gmail.com
 
-## License 
+## License
+
 [MIT](/LICENSE)
